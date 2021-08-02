@@ -1,0 +1,12 @@
+{
+	"Sensors":[
+		{
+			"name":"Anemometer",
+			"path":"sensor/anemometer"
+		},
+		{	
+			"name":"Pluviometer",
+			"path":"sensor/pluviometer"
+		}
+		]
+}
