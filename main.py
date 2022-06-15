@@ -1,4 +1,4 @@
-from configuration.ReadCofiguration import readJson as read
+from Configuration.ReadCofiguration import readJson as read
 from Request.RequestController import RequestController as Request
 from Response import ClientMQTT as response
 import threading
