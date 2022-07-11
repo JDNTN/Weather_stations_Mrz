@@ -4,12 +4,14 @@ import time
 
 class RequestController (Thread):
 
-    _data = ''
+    global __time
+    __time = 10 #Cambiar por 60
+    _data = ''    
 
     def __init__(self, data):
-        global _data 
+        global _data        
         _data = data
-        print(data)
+        print(data) #Este linea se debe eliminar
         Thread.__init__(self)
         self.daemon = True
         self.start()
@@ -18,13 +20,14 @@ class RequestController (Thread):
         self.requestSensors()
 
     def requestSensors(self):
-        global _data
+        global _data, __time
         print("entre")
+        cont = 0
         while(True):
-            for sensor in _data['Sensors']:
-                mqtt.requestSensor(sensor['path'])
-                print('Envie al path: '+ sensor['path'])
-            time.sleep(10)
+            cont = cont + 1 #Esta linea se debe eliminar          
+            mqtt.requestSensor()
+            print('Envie una peticion No: '+str(cont)) #Esta linea se debe de eliminar
+            time.sleep(_data['Time']*__time)
 
     def contingency(dato):
         pass

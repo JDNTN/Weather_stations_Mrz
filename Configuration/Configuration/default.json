@@ -1,12 +1,13 @@
 {
+	"Time":1,
 	"Sensors":[
 		{
 			"name":"Anemometer",
-			"path":"sensor/anemometer"
+			"path":"Sensor/Anemometro"
 		},
-		{	
+		{
 			"name":"Pluviometer",
 			"path":"sensor/pluviometer"
 		}
-		]
+	]
 }
